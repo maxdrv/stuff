@@ -11,6 +11,7 @@
     <modules>
         <module>discret_math</module>
         <module>util</module>
+        <module>leetcode</module>
     </modules>
 
 </project>
