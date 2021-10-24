@@ -12,9 +12,24 @@ public class TwoSumImplTest {
 
     private static final TwoSum hashMap = new TwoSumHashMap();
     private static final TwoSum square = new TwoSumSquareComplexity();
+    private static final TwoSum arrays = new TwoSumArrays();
 
     public static Stream<Arguments> implementations() {
-        return Stream.of(Arguments.of(hashMap), Arguments.of(square));
+        return Stream.of(
+//                Arguments.of(arrays)
+                Arguments.of(hashMap),
+                Arguments.of(square)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("implementations")
+    void test0(TwoSum a) {
+
+        var res = a.twoSum(new int[]{1, 2, 7, 11, 15, 16, 21}, 32);
+
+        assertThat(res)
+                .isEqualTo(new int[]{3, 6});
     }
 
     @ParameterizedTest
