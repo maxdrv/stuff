@@ -16,7 +16,7 @@ public class TwoSumImplTest {
 
     public static Stream<Arguments> implementations() {
         return Stream.of(
-//                Arguments.of(arrays)
+                Arguments.of(arrays),
                 Arguments.of(hashMap),
                 Arguments.of(square)
         );
@@ -28,8 +28,7 @@ public class TwoSumImplTest {
 
         var res = a.twoSum(new int[]{1, 2, 7, 11, 15, 16, 21}, 32);
 
-        assertThat(res)
-                .isEqualTo(new int[]{3, 6});
+        assertThat(res).containsExactlyInAnyOrder(3, 6);
     }
 
     @ParameterizedTest
@@ -38,8 +37,7 @@ public class TwoSumImplTest {
 
         var res = a.twoSum(new int[]{2, 7, 11, 15}, 9);
 
-        assertThat(res)
-                .isEqualTo(new int[]{0, 1});
+        assertThat(res).containsExactlyInAnyOrder(0, 1);
     }
 
     @ParameterizedTest
@@ -48,8 +46,7 @@ public class TwoSumImplTest {
 
         var res = a.twoSum(new int[]{3, 2, 4}, 6);
 
-        assertThat(res)
-                .isEqualTo(new int[]{1, 2});
+        assertThat(res).containsExactlyInAnyOrder(1, 2);
     }
 
     @ParameterizedTest
@@ -58,8 +55,7 @@ public class TwoSumImplTest {
 
         var res = a.twoSum(new int[]{3, 3}, 6);
 
-        assertThat(res)
-                .isEqualTo(new int[]{0, 1});
+        assertThat(res).containsExactlyInAnyOrder(0, 1);
     }
 
 }

@@ -23,11 +23,20 @@ public class TwoSumArrays implements TwoSum {
 
     @Override
     public int[] twoSum(int[] nums, int target) {
-        int n = nums.length;
-        int[] pair = new int[2];
+        int dist = 1;
+        for (int i = dist; i < nums.length; i++) {
+            for (int j = dist; j < nums.length; j++) {
 
-        // TODO ...
+                int a = nums[j];
+                int b = nums[j-i];
 
-        return pair;
+                if (a + b == target) {
+                    return new int[]{j, j-i};
+                }
+            }
+            dist++;
+        }
+
+        return new int[2];
     }
 }
