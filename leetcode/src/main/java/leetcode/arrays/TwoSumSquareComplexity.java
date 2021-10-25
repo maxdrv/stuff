@@ -1,4 +1,4 @@
-package arrays;
+package leetcode.arrays;
 
 /**
  * ok it's definitely o(n*n) complexity

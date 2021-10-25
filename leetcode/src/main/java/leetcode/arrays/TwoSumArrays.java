@@ -1,4 +1,4 @@
-package arrays;
+package leetcode.arrays;
 
 /**
  * how to improve {@link TwoSumSquareComplexity} ?
