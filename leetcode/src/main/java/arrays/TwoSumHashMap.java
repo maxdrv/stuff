@@ -14,7 +14,8 @@ public class TwoSumHashMap implements TwoSum {
 
         var cache = new HashMap<Integer, Integer>(nums.length);
         cache.put(nums[0], 0);
-        for (int i = 1, numsLength = nums.length; i < numsLength; i++) {
+
+        for (int i = 1; i <= nums.length; i++) {
             int num = nums[i];
 
             int reverse = target - num;
